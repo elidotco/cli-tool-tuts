@@ -10,6 +10,7 @@ export function getConfig() {
   console.log(pkgPath);
   if (pkgPath) {
     const isValid = ajV.validate(schema, pkgPath.config);
+    console.log(isValid);
     if (!isValid) {
       console.log("Invalid config found ");
       console.log(ajv.errors);
